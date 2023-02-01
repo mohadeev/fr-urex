@@ -1,0 +1,37 @@
+.container {
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 5px 0;
+}
+
+.drop_zone {
+  width: 400px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid #e5e7eb; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1.5px dashed #e8eaed;
+}
+.input_label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input_upload_image {
+  display: none;
+}

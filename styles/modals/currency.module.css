@@ -1,0 +1,33 @@
+.container,
+.container_affect {
+  margin-right: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  min-width: 10px;
+  cursor: pointer;
+  column-gap: 5px;
+  /* background-color: red; */
+}
+.currency > p,
+.container_my_account > p {
+  cursor: pointer;
+}
+.container_affect:hover {
+  text-decoration: underline #222222;
+}
+
+.container:hover {
+  background-color: #fafafa;
+  text-decoration: underline #222222;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.currency {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

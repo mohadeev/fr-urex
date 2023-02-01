@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+.langAndCurrency {
+  display: flex;
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 50%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .langAndCurrency {
+    display: none;
+  }
+}

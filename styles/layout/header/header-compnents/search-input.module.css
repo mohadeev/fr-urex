@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+  height: 35px;
+  position: relative;
+}
+
+.container_my_account {
+  padding: 0px 0px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  height: 100%;
+  border: solid 1px #dbdbdb;
+}
+
+.svg {
+  color: #222222;
+  cursor: pointer;
+  border: none;
+  border-left: solid 1px #dbdbdb;
+  height: 90%;
+  width: 10%;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.svg > svg {
+}
+
+.input_search {
+  width: 90%;
+  border: none;
+  outline: none;
+  height: 100%;
+  padding: 0px 0px 0 20px;
+
+  background-color: transparent;
+}
+
+.container_my_account:hover {
+  background-color: #fafafa;
+  text-decoration: underline #222222;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border: solid 1px transparent;
+}
+
+.modal_ {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  top: 40px;
+  /*feldt: 50%; */
+}

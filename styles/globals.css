@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: myFirstFont;
+  /* src: url("../public/fonts/GT-Eesti-Display-Regular.otf"); */
+  src: url("../public/fonts/SFPRODISPLAYREGULAR.otf");
+}
+html,
+body {
+  overflow-y: auto;
+  font-family: myFirstFont, sans-serif;
+}

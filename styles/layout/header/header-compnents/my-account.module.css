@@ -1,0 +1,65 @@
+.container > svg {
+  color: #222222;
+  font-size: 23px;
+  cursor: pointer;
+}
+.container,
+.container_my_account {
+  padding: 5px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  position: relative;
+}
+.number_container {
+  background-color: #f3941e;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.number_container > p {
+  color: #222222;
+}
+.container_my_account > svg {
+  color: #222222;
+  font-size: 25px;
+  cursor: pointer;
+}
+.container > p,
+.container_my_account > p {
+  cursor: pointer;
+}
+
+.container:hover,
+.container_my_account:hover {
+  background-color: #fafafa;
+  text-decoration: underline #222222;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container,
+  .container_my_account {
+    padding: 5px 5px;
+    border-radius: 20px;
+    column-gap: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container > p,
+  .container_my_account > p {
+    display: none;
+  }
+}

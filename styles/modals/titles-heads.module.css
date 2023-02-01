@@ -1,0 +1,30 @@
+.head_4_bold {
+  font-size: 20px;
+  text-align: start;
+  padding: 0;
+  margin: 0;
+  color: #222222;
+  /* font-weight: bolder; */
+  font-weight: 800;
+}
+.m_t {
+  font-size: 16px;
+  color: #222222;
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+}
+.strong {
+  font-size: 16px;
+  color: #222222;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+.big_strong {
+  font-size: 20px;
+  color: #222222;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}

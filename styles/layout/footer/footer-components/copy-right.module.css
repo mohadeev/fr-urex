@@ -1,0 +1,132 @@
+.container {
+  width: 100%;
+  min-height: 60px;
+  border-top: 1px solid #222222;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+.req_data {
+  margin-right: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20%;
+  color: #222222;
+  cursor: pointer;
+}
+
+.to_docoraton {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+}
+.powered_our_team {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 200;
+  cursor: pointer;
+  text-align: start;
+  padding: 0;
+  margin: 0;
+}
+/* 
+.span_dicoration {
+  background-image: url("https://www.urexcursion.com/images/slider-bg-right_2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  margin-top: -15px;
+} */
+
+.container_ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 20%;
+}
+.li {
+  list-style: none;
+  font-size: 14px;
+  padding: 5px 0;
+  border-radius: 20px;
+  text-align: start;
+  padding: 5px 10px;
+  font-weight: 200;
+  color: #222222;
+  list-style: none;
+  font-size: 14px;
+  padding: 5px 0;
+  border-radius: 20px;
+  /* text-align: center; */
+  padding: 5px 10px;
+  font-weight: 500;
+  color: #222222;
+}
+.li:hover {
+  text-decoration: underline #222222;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .req_data {
+    order: 1;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    color: #222222;
+    cursor: pointer;
+    text-align: start;
+  }
+
+  .container_ul {
+    order: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .to_docoraton {
+    order: 2;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+}
