@@ -6,6 +6,7 @@ const initialState = {
   popUppData: {},
   signUp: true,
   formSignUp: false,
+  cookieContainer: true,
 };
 
 export const GeneralStyle = createSlice({
@@ -30,6 +31,9 @@ export const GeneralStyle = createSlice({
     reducerSignUp: (state: any, action: any) => {
       state.signUp = action.paylaod;
     },
+    toggleCookie: (state: any, action: any) => {
+      state.cookieContainer = action.paylaod;
+    },
   },
 });
 
@@ -38,6 +42,7 @@ export const {
   poPUppRedcuer,
   reducerSignUp,
   reducerFormSignUp,
+  toggleCookie,
 } = GeneralStyle.actions;
 const AllReducers = GeneralStyle.reducer;
 export default AllReducers;

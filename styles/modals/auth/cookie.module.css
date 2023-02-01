@@ -1,0 +1,67 @@
+.singup_container {
+  width: 100%;
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  align-items: center;
+  margin: 0p auto;
+  background: rgba(34, 34, 34, 0.65);
+  transition-delay: 0s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  /* filter: blur(1px); */
+}
+.div_white_container {
+  flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.div_second {
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fbf1ec;
+  align-items: flex-start;
+  justify-content: flex-start;
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 50px 0;
+  border-radius: 20px;
+  position: relative;
+  padding: 20px;
+}
+.button_sign_up {
+  font-size: 17px;
+  /* font-family: Helvetica Neue; */
+  color: #fff;
+  cursor: pointer;
+  background-color: #222222;
+  height: 45px;
+  width: auto;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 0 10px;
+}
+
+.meun {
+  font-size: 30px;
+  cursor: pointer;
+  /* border: solid 1.5px #222222; */
+  padding: 2px;
+  border-radius: 5px;
+  color: #fff;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}

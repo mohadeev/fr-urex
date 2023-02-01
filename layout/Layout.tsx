@@ -13,6 +13,7 @@ import SideMenu from "./header/SideMenu";
 import { PopUpp } from "../components/modals/PopUpp";
 import basedGetUrlRequestLogedIn from "../utils/basedGetUrlRequestLogedIn";
 import AuthSignIn from "../components/modals/auth/AuthSignIn";
+import Cookie from "../components/modals/auth/Cookie";
 
 interface main {
   children: any;
@@ -27,13 +28,16 @@ const Layout = ({ children }: any) => {
     (state: any) => state.UserSignIn.UserIsSignedIn
   );
   const formSignUp = useSelector((state: any) => state.GenrealStyle.formSignUp);
+  const cookieContainer = useSelector(
+    (state: any) => state.GenrealStyle.cookieContainer
+  );
   const dispatch = useDispatch();
   const [Height, setHeight] = useState(800);
   useEffect(() => {
     setHeight(window.innerHeight);
     dispatch(WindowHeightRedcuer(window.innerHeight - 60));
   }, []);
-//FGsd
+  //FGsd
   useEffect(() => {
     const locaFetch = async () => {
       let UserData = Cookies.get("user");
@@ -68,7 +72,7 @@ const Layout = ({ children }: any) => {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <meta name="msvalidate.01" content="991B928EC8A7ACA0968F1F86A936ADE8" />
         <meta
           name="google-site-verification"
@@ -153,7 +157,7 @@ const Layout = ({ children }: any) => {
           site: "@site",
           cardType: "summary_large_image",
         }}
-      />
+      /> */}
 
       <div className={Style.container}>
         <Header />
@@ -162,7 +166,7 @@ const Layout = ({ children }: any) => {
         <div className={Style.children}> {children}</div>
         {MenuBoolean && <SideMenu />}
         {formSignUp && <AuthSignIn />}
-
+        {cookieContainer && <Cookie />}
         <Footer />
       </div>
     </>
