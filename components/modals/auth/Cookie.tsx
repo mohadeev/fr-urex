@@ -22,17 +22,24 @@ const Cookie = () => {
   return (
     <div className={Style.singup_container}>
       <div className={Style.div_second}>
-        <TitlesHeads Head={"Your Ur Excursion Privacy Settings"} HeadName="head_4_bold" />
+        <TitlesHeads
+          Head={"Your Ur Excursion Privacy Settings"}
+          HeadName="head_4_bold"
+        />
         <ParagraphsP
           Text={
             "In order to give you the best experience, we use cookies and similar technologies for performance, analytics, personalization, advertising, and to help our site function. Want to know more? Read our Cookie Policy. You can change your preferences any time in your Privacy Settings."
           }
           TextName={"text_flex_start_normal"}
         />
-        <div></div>
-        <button className={Style.button_sign_up} onClick={handelToggleMenu}>
-          Accept
-        </button>
+        <div className={Style.buttons_container}>
+          <button className={Style.button_open_color} onClick={handelToggleMenu}>
+            Update settings
+          </button>
+          <button className={Style.button_sign_up} onClick={handelToggleMenu}>
+            Accept
+          </button>
+        </div>
       </div>
       <span className={Style.meun}>
         <AiOutlineClose />

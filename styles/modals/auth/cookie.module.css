@@ -40,7 +40,8 @@
   position: relative;
   padding: 20px;
 }
-.button_sign_up {
+.button_sign_up,
+.button_open_color {
   font-size: 17px;
   /* font-family: Helvetica Neue; */
   color: #fff;
@@ -53,9 +54,23 @@
   border-radius: 30px;
   padding: 0 10px;
 }
-
+.button_open_color {
+  background-color: #f5f4f5;
+  color: #222222;
+  border: 1px solid #222222;
+}
+.buttons_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 10px;
+}
 .meun {
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
   /* border: solid 1.5px #222222; */
   padding: 2px;
