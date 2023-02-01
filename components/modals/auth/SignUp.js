@@ -6,7 +6,7 @@ import { AiOutlineEye } from "@react-icons/all-files/ai/AiOutlineEye";
 import { AiOutlineEyeInvisible } from "@react-icons/all-files/ai/AiOutlineEyeInvisible";
 import Link from "next/link";
 
-const SignUp = ({ token }) => {
+const SignUp = () => {
   const router = useRouter();
   const [FullName, setFullName] = useState("");
   const [Email, setEmail] = useState("");
