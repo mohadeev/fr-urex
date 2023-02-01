@@ -30,15 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/auth/sign-in": [
+    "/user/card": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/auth/sign-in.js"
-    ],
-    "/user/wish-list": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/user/wish-list.js"
+      "static/chunks/pages/user/card.js"
     ]
   },
   "ampFirstPages": []
