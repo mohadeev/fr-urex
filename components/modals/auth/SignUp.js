@@ -5,6 +5,8 @@ import Cookies from "js-cookie";
 import { AiOutlineEye } from "@react-icons/all-files/ai/AiOutlineEye";
 import { AiOutlineEyeInvisible } from "@react-icons/all-files/ai/AiOutlineEyeInvisible";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { reducerSignUp } from "../../../redux/style-slice/general-style/GenrealStyle";
 
 const SignUp = () => {
   const router = useRouter();
@@ -52,9 +54,12 @@ const SignUp = () => {
   const ShowPasWordFunc1 = () => {
     setShowPasWord1(!ShowPasWord1);
   };
-
+  const signUp = useSelector((state) => state.GenrealStyle.signUp);
+  const dispatch = useDispatch();
+  const handelSwitchSignOption = () => {
+    dispatch(reducerSignUp(false));
+  };
   return (
-    <div className={Style.singup_container}>
       <div className={Style.div_form}>
         <form className={Style.form_sing_up} onSubmit={HandelSumite}>
           {Message}
@@ -133,10 +138,15 @@ const SignUp = () => {
           <button className={Style.button_sign_up} onSubmit={HandelSumite}>
             Sing up
           </button>
+          <button
+            className={Style.button_sign_up_outline}
+            onClick={handelSwitchSignOption}
+          >
+            Sign in
+          </button>
         </form>
       </div>
-      {/* <div className={Style.div_info_singup}></div> */}
-    </div>
+    
   );
 };
 

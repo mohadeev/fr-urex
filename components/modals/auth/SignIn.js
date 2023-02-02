@@ -9,6 +9,7 @@ import Cookies from "js-cookie";
 import { AiOutlineEye } from "@react-icons/all-files/ai/AiOutlineEye";
 import { AiOutlineEyeInvisible } from "@react-icons/all-files/ai/AiOutlineEyeInvisible";
 import Link from "next/link";
+import { reducerSignUp } from "../../../redux/style-slice/general-style/GenrealStyle";
 //GH
 const SignIn = () => {
   const Router = useRouter();
@@ -59,8 +60,12 @@ const SignIn = () => {
   const ShowPasWordFunc = () => {
     setShowPasWord(!ShowPasWord);
   };
+  const signUp = useSelector((state) => state.GenrealStyle.signUp);
+
+  const handelSwitchSignOption = () => {
+    dispatch(reducerSignUp(true));
+  };
   return (
-    <div className={Style.singup_container}>
       <div className={Style.div_form}>
         <form className={Style.form_sing_up} onSubmit={HandelSumite}>
           <label htmlFor="email" className={Style.label_iput}>
@@ -111,11 +116,17 @@ const SignIn = () => {
             </Link>
           </p>
           <button className={Style.button_sign_up} onSubmit={HandelSumite}>
-            Log in
+            Sign in
+          </button>
+          <button
+            className={Style.button_sign_up_outline}
+            onClick={handelSwitchSignOption}
+          >
+            Sign up
           </button>
         </form>
       </div>
-    </div>
+    
   );
 };
 

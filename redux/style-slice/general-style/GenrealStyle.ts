@@ -25,14 +25,14 @@ export const GeneralStyle = createSlice({
       }
     },
     reducerFormSignUp: (state: any, action: any) => {
-      state.formSignUp = action.paylaod;
+      state.formSignUp = action.payload;
     },
 
     reducerSignUp: (state: any, action: any) => {
-      state.signUp = action.paylaod;
+      state.signUp = action.payload;
     },
     toggleCookie: (state: any, action: any) => {
-      state.cookieContainer = action.paylaod;
+      state.cookieContainer = action.payload;
     },
   },
 });

@@ -56,7 +56,8 @@
   font-size: 13px;
   color: #666;
 }
-.button_sign_up {
+.button_sign_up,
+.button_sign_up_outline {
   font-size: 14px;
   /* font-family: Helvetica Neue; */
   color: #fff;
@@ -68,6 +69,11 @@
   outline: none;
   border-radius: 20px;
   padding: 0 10px;
+}
+.button_sign_up_outline {
+  background-color: #f5f4f5;
+  color: #222222;
+  border: 1px solid #222222;
 }
 .div_info_singup {
   width: 75%;
@@ -95,4 +101,16 @@
   right: 10%;
   top: 11px;
   cursor: pointer;
+}
+
+.meun {
+  font-size: 40px;
+  cursor: pointer;
+  /* border: solid 1.5px #222222; */
+  padding: 2px;
+  border-radius: 5px;
+  color: #fff;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }

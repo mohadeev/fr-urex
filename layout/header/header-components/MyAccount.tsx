@@ -16,6 +16,7 @@ import { RiTicketLine } from "@react-icons/all-files/ri/RiTicketLine";
 import { useRouter } from "next/router";
 import { UserSignOut } from "../../../redux/user-slice/UserSignIn";
 import { HeaderText } from "../../../components/modals/HeaderText";
+import { reducerFormSignUp, reducerSignUp } from "../../../redux/style-slice/general-style/GenrealStyle";
 // import Cookies from "js-cookie";
 
 const MyAccount = () => {
@@ -78,9 +79,22 @@ const MyAccount = () => {
 
     Router.push("/");
   };
+  const handelSwitchSignOption = (value: boolean) => {
+  
+    dispatch(reducerFormSignUp(true));
+    dispatch(reducerSignUp(value));
+  };
   const dropDownItems = [
-    { name: "Log-in", icon: <FiLogIn />, func: HandelLogIn },
-    { name: "Sing-up", icon: <AiOutlineUser />, func: HandelSigUp },
+    {
+      name: "Log-in",
+      icon: <FiLogIn />,
+      func: () => handelSwitchSignOption(false),
+    },
+    {
+      name: "Sing-up",
+      icon: <AiOutlineUser />,
+      func: () => handelSwitchSignOption(true),
+    },
     { name: "History", icon: <BiHistory />, func: HandelHistroy },
     { name: "Setting", icon: <FiSettings />, func: HandelSettings },
   ];
@@ -92,6 +106,7 @@ const MyAccount = () => {
     { name: "Setting", icon: <FiSettings />, func: HandelSettings },
     { name: "Sign-out", icon: <FiLogOut />, func: HandelSignOut },
   ];
+
   return (
     <div className={Style.container}>
       <div

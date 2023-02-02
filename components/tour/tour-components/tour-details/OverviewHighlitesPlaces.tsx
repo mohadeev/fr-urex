@@ -25,7 +25,7 @@ const OverviewHighlitesPlaces = ({ tourData }: any) => {
             Text={tourData?.overview}
             TextName={"text_flex_start_normal"}
           />
-          <div className={Style.div_shadow_container_bottom}></div>
+          {/* <div className={Style.div_shadow_container_bottom}></div> */}
         </div>
       </div>
     </div>
