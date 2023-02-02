@@ -6,6 +6,7 @@ import LangAndCurrency from "./header-components/LangAndCurrency";
 import { useSelector } from "react-redux";
 import { Currency } from "../../components/modals/LangCurrency";
 import SearchInput from "./header-components/SearchInput";
+import { HeaderText } from "../../components/modals/HeaderText";
 const HeaderCenter = () => {
   const NavLinks = [
     { name: "Tours", link: "/tours" },
@@ -27,7 +28,11 @@ const HeaderCenter = () => {
                   className={asPath === `/${link}` ? Style.lihover : Style.li}
                   key={link}
                 >
-                  <Link href={link}>{name}</Link>
+                  <Link href={link}>
+                    <>
+                      <HeaderText Text={name} />
+                    </>
+                  </Link>
                 </li>
               ))}
               <li className={Style.langAndCurrency}>

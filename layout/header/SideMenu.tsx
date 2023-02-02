@@ -12,6 +12,7 @@ import { IoCloseCircleOutline } from "@react-icons/all-files/io5/IoCloseCircleOu
 import SearchInput from "./header-components/SearchInput";
 import { ParagraphsP } from "../../components/modals/NormalText";
 import { useRouter } from "next/router";
+import { HeaderText } from "../../components/modals/HeaderText";
 const SideMenu = () => {
   const Router = useRouter();
   const UserIsSignedIn = useSelector(
@@ -57,10 +58,7 @@ const SideMenu = () => {
                   }}
                   className={Style.link_container}
                 >
-                  <ParagraphsP
-                    Text={name}
-                    TextName={"text_flex_start_normal"}
-                  />
+                  <HeaderText Text={name} />
                 </div>
               ))}
             </div>
@@ -73,9 +71,9 @@ const SideMenu = () => {
                   }}
                   className={Style.link_container}
                 >
-                  <ParagraphsP
+                  <HeaderText
                     Text={name}
-                    TextName={"text_flex_start_normal"}
+                    // TextName={"text_flex_start_normal"}
                   />
                 </div>
               ))}
@@ -89,9 +87,9 @@ const SideMenu = () => {
                   }}
                   className={Style.link_container}
                 >
-                  <ParagraphsP
+                  <HeaderText
                     Text={name}
-                    TextName={"text_flex_start_normal"}
+                    // TextName={"text_flex_start_normal"}
                   />
                 </div>
               ))}

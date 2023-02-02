@@ -4,6 +4,7 @@ import Style from "../../../styles/layout/header/header-compnents/my-account.mod
 import { ParagraphsP } from "../../../components/modals/NormalText";
 import Link from "next/link";
 import { useSelector } from "react-redux";
+import { HeaderText } from "../../../components/modals/HeaderText";
 
 const MyAccount = () => {
   const basketLength = useSelector(
@@ -14,9 +15,9 @@ const MyAccount = () => {
       <div className={Style.container}>
         {basketLength?.length >= 1 && (
           <div className={Style.number_container}>
-            <ParagraphsP
+            <HeaderText
               Text={basketLength.length}
-              TextName={"text_flex_start_normal"}
+              // TextName={"text_flex_start_normal"}
             />
           </div>
         )}

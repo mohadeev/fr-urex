@@ -4,6 +4,7 @@ import React from "react";
 import Style from "../../styles/layout/header/header-compnents/header-left.module.css";
 import { IoMenuOutline } from "@react-icons/all-files/io5/IoMenuOutline";
 import { IoCloseOutline } from "@react-icons/all-files/io5/IoCloseOutline";
+import { BsList } from "@react-icons/all-files/bs/BsList";
 
 import { FaMapSigns } from "@react-icons/all-files/fa/FaMapSigns";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,7 +19,7 @@ const HeaderLeft = () => {
   return (
     <div className={Style.container}>
       <span onClick={handelToggleMenu} className={Style.meun}>
-        {MenuBoolean ? <IoCloseOutline /> : <IoMenuOutline />}
+        {MenuBoolean ? <IoCloseOutline /> : <BsList />}
       </span>
 
       <Link href="/">

@@ -6,7 +6,7 @@ import { FiSettings } from "@react-icons/all-files/fi/FiSettings";
 import Style from "../../../styles/layout/header/header-compnents/my-header.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { ToggleMenu } from "../../../redux/style-slice/menu/SideMenu";
-import { ParagraphsP } from "../../../components/modals/NormalText";
+// import { HeaderText } from "../../../components/modals/NormalText";
 import ModalContainer from "../../../components/modals/ModalContainer";
 import allExcursionsFetch from "../../../utils/allExcursionsFetch";
 import { FiLogOut } from "@react-icons/all-files/fi/FiLogOut";
@@ -15,6 +15,7 @@ import { MdCardTravel } from "@react-icons/all-files/md/MdCardTravel";
 import { RiTicketLine } from "@react-icons/all-files/ri/RiTicketLine";
 import { useRouter } from "next/router";
 import { UserSignOut } from "../../../redux/user-slice/UserSignIn";
+import { HeaderText } from "../../../components/modals/HeaderText";
 // import Cookies from "js-cookie";
 
 const MyAccount = () => {
@@ -99,9 +100,9 @@ const MyAccount = () => {
         className={Style.container_my_account}
       >
         <AiOutlineUser />
-        <ParagraphsP
+        <HeaderText
           Text={UserIsSignedIn ? userData?.username : "Log-in"}
-          TextName={"text_flex_start_normal"}
+          // TextName={"text_flex_start_normal"}
         />
       </div>
       {ShowDiv && (
@@ -117,9 +118,9 @@ const MyAccount = () => {
                       className={Style.link_container}
                     >
                       {icon}
-                      <ParagraphsP
+                      <HeaderText
                         Text={name}
-                        TextName={"text_flex_start_normal"}
+                        // TextName={"text_flex_start_normal"}
                       />
                     </div>
                   ))
@@ -131,18 +132,18 @@ const MyAccount = () => {
                       className={Style.link_container}
                     >
                       {icon}
-                      <ParagraphsP
+                      <HeaderText
                         Text={name}
-                        TextName={"text_flex_start_normal"}
+                        // TextName={"text_flex_start_normal"}
                       />
                     </div>
                   ))}
               {/* {dropDownItems.map(({ name, icon, func }) => (
                 <div onClick={func && func} className={Style.link_container}>
                   {icon}
-                  <ParagraphsP
+                  <HeaderText
                     Text={name}
-                    TextName={"text_flex_start_normal"}
+                    // TextName={"text_flex_start_normal"}
                   />
                 </div>
               ))} */}

@@ -10,7 +10,7 @@ import { AiOutlineEye } from "@react-icons/all-files/ai/AiOutlineEye";
 import { AiOutlineEyeInvisible } from "@react-icons/all-files/ai/AiOutlineEyeInvisible";
 import Link from "next/link";
 import { toggleCookie } from "../../../redux/style-slice/general-style/GenrealStyle";
-import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
+import { IoCloseOutline } from "@react-icons/all-files/io5/IoCloseOutline";
 import { TitlesHeads } from "../TitlesHeads";
 import { ParagraphsP } from "../NormalText";
 //GH
@@ -33,7 +33,10 @@ const Cookie = () => {
           TextName={"text_flex_start_normal"}
         />
         <div className={Style.buttons_container}>
-          <button className={Style.button_open_color} onClick={handelToggleMenu}>
+          <button
+            className={Style.button_open_color}
+            onClick={handelToggleMenu}
+          >
             Update settings
           </button>
           <button className={Style.button_sign_up} onClick={handelToggleMenu}>
@@ -42,7 +45,7 @@ const Cookie = () => {
         </div>
       </div>
       <span className={Style.meun}>
-        <AiOutlineClose />
+        <IoCloseOutline />
       </span>
     </div>
   );

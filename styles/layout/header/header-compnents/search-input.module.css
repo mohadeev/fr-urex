@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: 35px;
+  height: 40px;
   position: relative;
 }
 
@@ -13,14 +13,14 @@
   justify-content: center;
   column-gap: 5px;
   height: 100%;
-  border: solid 1px #dbdbdb;
+  border: solid 1px #222222;
 }
 
 .svg {
   color: #222222;
   cursor: pointer;
   border: none;
-  border-left: solid 1px #dbdbdb;
+  border-left: solid 1px #222222;
   height: 90%;
   width: 10%;
   font-size: 20px;
@@ -39,7 +39,6 @@
   outline: none;
   height: 100%;
   padding: 0px 0px 0 20px;
-
   background-color: transparent;
 }
 
@@ -47,7 +46,7 @@
   background-color: #fafafa;
   text-decoration: underline #222222;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  border: solid 1px transparent;
+  /* border: solid 1px transparent; */
 }
 
 .modal_ {
