@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  min-height: 60px;
+  min-height: auto;
   border-bottom: 1px solid #dbdbdb;
   display: flex;
   flex-direction: row;

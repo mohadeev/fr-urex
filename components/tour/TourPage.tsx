@@ -13,7 +13,6 @@ const TourPage = ({ allData, Tours }: any) => {
     <div className={Style.container}>
       <SlideAndBookForm tourData={tour} />
       <TourDetails tourData={tour} />
-
       <Other Tours={Tours} />
     </div>
   );

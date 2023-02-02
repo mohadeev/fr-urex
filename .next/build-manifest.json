@@ -29,11 +29,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/tours/[id].js"
-    ],
-    "/user/wish-list": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/user/wish-list.js"
     ]
   },
   "ampFirstPages": []
