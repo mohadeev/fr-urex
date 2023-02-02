@@ -2,9 +2,9 @@
 import React from "react";
 import { AiOutlineShopping } from "@react-icons/all-files/ai/AiOutlineShopping";
 import Style from "../../../styles/layout/header/header-compnents/my-account.module.css";
-import { ParagraphsP } from "../../../components/modals/NormalText";
 import Link from "next/link";
 import { useSelector } from "react-redux";
+import { HeaderText } from "../../../components/modals/HeaderText";
 
 const ShoppingCart = () => {
   const basketLength = useSelector(
@@ -15,15 +15,12 @@ const ShoppingCart = () => {
       <div className={Style.container}>
         {basketLength?.length >= 1 && (
           <div className={Style.number_container}>
-            <ParagraphsP
-              Text={basketLength.length}
-              TextName={"text_flex_start_normal"}
-            />
+            <HeaderText Text={basketLength.length} />
           </div>
         )}
 
         <AiOutlineShopping />
-        <ParagraphsP Text={"Cart"} TextName={"text_flex_start_normal"} />
+        <HeaderText Text={"Cart"} />
       </div>
     </Link>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { BiHeart } from "@react-icons/all-files/bi/BiHeart";
 import Style from "../../../styles/layout/header/header-compnents/my-account.module.css";
-import { ParagraphsP } from "../../../components/modals/NormalText";
+// import { HeaderText } from "../../../components/modals/NormalText";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { HeaderText } from "../../../components/modals/HeaderText";
@@ -22,7 +22,7 @@ const MyAccount = () => {
           </div>
         )}
         <BiHeart />
-        <ParagraphsP Text={"Wishlist"} TextName={"text_flex_start_normal"} />
+        <HeaderText Text={"Wishlist"} />
       </div>
     </Link>
   );

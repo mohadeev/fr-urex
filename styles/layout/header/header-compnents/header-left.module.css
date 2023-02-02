@@ -71,9 +71,9 @@
 }
 @media screen and (max-width: 600px) {
   .logo_text {
-    font-size: 13px;
+    font-size: 15px;
     color: #222222;
-    font-weight: 600;
+    font-weight: 00;
   }
   .container_logo {
     column-gap: 5px;
