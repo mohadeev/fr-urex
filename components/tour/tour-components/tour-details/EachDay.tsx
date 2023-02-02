@@ -19,9 +19,7 @@ const Itinerary = ({ isFirst, isLast, dayData }: any) => {
   const HanndelActive = () => {
     setActive(!Active);
   };
-  const TourDay =
-    "Essaouira - Casablanca. Spend the next three days exploring the sights and delights of Essaouira at your own pace. Set on the rugged shores of the breezy Atlantic Coast, this charming seaside city offers a welcome respite from the hustle and bustle of Marrakech. While away the days here exploring its winding streets lined with whitewash houses, picking your way through the shops in its ancient medina, or by sitting at an ocean-facing restaurant sipping on a cup of coffee. During the warmer months why not try some water sports too, as the windy shores here offer ideal conditions for wind and kite surfing. On the evening of day 6 a private transfer will take you back to Casablanca for the night.";
-  return (
+    return (
     <div className={isLast ? Style.container_last : Style.container}>
       <div className={Style.icon_container}>
         <i className={Style.icon_first}>{isFirst && <IoLocation />}</i>

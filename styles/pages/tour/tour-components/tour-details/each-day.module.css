@@ -8,6 +8,8 @@
   align-items: flex-start;
   border-left: 1px solid #dbdbdb;
   position: relative;
+  /* background-color: red; */
+  margin-left: 13px;
 }
 .container_last {
   width: 80%;
@@ -19,6 +21,7 @@
   align-items: flex-start;
   border-left: none;
   position: relative;
+  margin-left: 13px;
 }
 .icon_container {
   left: -13px;
