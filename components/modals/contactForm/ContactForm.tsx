@@ -73,26 +73,30 @@ function ContactForm() {
   };
   return (
     <form className={Style.container} onSubmit={handleSubmet}>
-      <InputStart
-        HandelChange={(e: any) => setname(e.target.value)}
-        TextTop={"Name:"}
-        PlaceHolder={"name"}
-      />
-      <InputStart
-        HandelChange={(e: any) => setemail(e.target.value)}
-        TextTop={"Email:"}
-        PlaceHolder={"email"}
-      />
-      <InputStart
-        HandelChange={(e: any) => setsubject(e.target.value)}
-        TextTop={"Subject:"}
-        PlaceHolder={"subject"}
-      />
-      <InputStart
-        HandelChange={(e: any) => setphone(e.target.value)}
-        TextTop={"Phone:"}
-        PlaceHolder={"phone"}
-      />
+      <div className={Style.date_div}>
+        <InputStart
+          HandelChange={(e: any) => setname(e.target.value)}
+          TextTop={"Name:"}
+          PlaceHolder={"name"}
+        />
+        <InputStart
+          HandelChange={(e: any) => setemail(e.target.value)}
+          TextTop={"Email:"}
+          PlaceHolder={"email"}
+        />
+      </div>
+      <div className={Style.date_div}>
+        <InputStart
+          HandelChange={(e: any) => setsubject(e.target.value)}
+          TextTop={"Subject:"}
+          PlaceHolder={"subject"}
+        />
+        <InputStart
+          HandelChange={(e: any) => setphone(e.target.value)}
+          TextTop={"Phone:"}
+          PlaceHolder={"phone"}
+        />
+      </div>
 
       <div className={Style.date_div}>
         <InputDate
@@ -114,11 +118,14 @@ function ContactForm() {
           HandelChange={(e: any) => setchilds(e.target.value)}
         />
       </div>
-      <TextEreaStart
-        HandelChange={(e: any) => setmessage(e.target.value)}
-        TextTop={"Message:"}
-        PlaceHolder={"Message"}
-      />
+      <div className={Style.date_div}>
+        <TextEreaStart
+          HandelChange={(e: any) => setmessage(e.target.value)}
+          TextTop={"Message:"}
+          PlaceHolder={"Message"}
+        />
+      </div>
+
       <SubmiteButton onClick={handleSubmet} />
     </form>
   );
