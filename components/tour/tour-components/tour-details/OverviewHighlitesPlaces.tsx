@@ -20,10 +20,13 @@ const OverviewHighlitesPlaces = ({ tourData }: any) => {
       <b className={Style.title}></b>
       <div className={Style.container_highlits}>
         <TitlesHeads Head={"Overview"} HeadName="head_4_bold" />
-        <ParagraphsP
-          Text={tourData?.overview}
-          TextName={"text_flex_start_normal"}
-        />
+        <div className={Style.div_shadow_container}>
+          <ParagraphsP
+            Text={tourData?.overview}
+            TextName={"text_flex_start_normal"}
+          />
+          <div className={Style.div_shadow_container_bottom}></div>
+        </div>
       </div>
     </div>
   );
