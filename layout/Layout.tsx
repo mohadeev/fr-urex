@@ -72,7 +72,7 @@ const Layout = ({ children }: any) => {
 
   return (
     <>
-      {/* <Head>
+      <Head>
         <meta name="msvalidate.01" content="991B928EC8A7ACA0968F1F86A936ADE8" />
         <meta
           name="google-site-verification"
@@ -123,6 +123,16 @@ const Layout = ({ children }: any) => {
             }),
           }}
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <NextSeo
         title="Using More of Config"
@@ -157,7 +167,7 @@ const Layout = ({ children }: any) => {
           site: "@site",
           cardType: "summary_large_image",
         }}
-      /> */}
+      />
 
       <div className={Style.container}>
         <Header />

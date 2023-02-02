@@ -12,5 +12,6 @@ html,
 body {
   overflow-y: auto;
   /* font-family: myFirstFont, sans-serif; */
-  font-family: myFirstFont;
+  /* font-family: myFirstFont; */
+  font-family: "Inter Tight", sans-serif;
 }
