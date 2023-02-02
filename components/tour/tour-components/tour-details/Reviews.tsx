@@ -9,7 +9,6 @@ const Reviews = ({ tourData }: any) => {
       {tourData?.reviews?.length
         ? tourData?.reviews.map((review: any) => <Review review={review} />)
         : null}
-
       <Review />
     </div>
   );

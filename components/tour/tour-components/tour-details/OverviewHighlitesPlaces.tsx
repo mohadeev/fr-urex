@@ -18,11 +18,13 @@ const OverviewHighlitesPlaces = ({ tourData }: any) => {
         <DestinationsSamllCard />
       </div>
       <b className={Style.title}></b>
-      <TitlesHeads Head={"Overview"} HeadName="head_4_bold" />
-      <ParagraphsP
-        Text={tourData?.overview}
-        TextName={"text_flex_start_normal"}
-      />
+      <div className={Style.container_highlits}>
+        <TitlesHeads Head={"Overview"} HeadName="head_4_bold" />
+        <ParagraphsP
+          Text={tourData?.overview}
+          TextName={"text_flex_start_normal"}
+        />
+      </div>
     </div>
   );
 };

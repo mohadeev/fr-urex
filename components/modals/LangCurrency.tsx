@@ -4,6 +4,7 @@ import Style from "../../styles/modals/currency.module.css";
 import basedGetUrlRequest from "../../utils/basedGetUrlRequest";
 import { ParagraphsP } from "./NormalText";
 import { IoIosArrowDown } from "@react-icons/all-files/io/IoIosArrowDown";
+import { HeaderText } from "./HeaderText";
 
 export const Lang = ({ NoEffect }: any) => {
   const [countriesData, setCountriesData] = useState([]);
@@ -46,11 +47,11 @@ export const Lang = ({ NoEffect }: any) => {
   return (
     <div className={NoEffect ? Style.container_affect : Style.container}>
       <div className={Style.currency}>
-        <ParagraphsP Text={contryData + " " + " | " + " "} />
+        <HeaderText Text={contryData + " " + " | " + " "} />
       </div>
       <div className={Style.currency}>
-        <ParagraphsP Text={" " + " " + " " + currenyName} />
-        <ParagraphsP Text={` (${symbolData})`} />
+        <HeaderText Text={" " + " " + " " + currenyName} />
+        <HeaderText Text={` (${symbolData})`} />
       </div>
       <IoIosArrowDown />
     </div>
@@ -83,10 +84,10 @@ export const Currency = () => {
   return (
     <div className={Style.container}>
       <span className={Style.currency}>
-        <ParagraphsP Text={currenyName} />
+        <HeaderText Text={currenyName} />
       </span>{" "}
       <span className={Style.currency}>
-        <ParagraphsP Text={`(${contryData})`} />
+        <HeaderText Text={`(${contryData})`} />
       </span>
       <IoIosArrowDown />
     </div>

@@ -5,8 +5,8 @@ import { IoCarOutline } from "@react-icons/all-files/io5/IoCarOutline";
 import { IoMdPhonePortrait } from "@react-icons/all-files/io/IoMdPhonePortrait";
 import { IoChatbubblesOutline } from "@react-icons/all-files/io5/IoChatbubblesOutline";
 import { IoPeopleOutline } from "@react-icons/all-files/io5/IoPeopleOutline";
-import { ImCancelCircle } from "@react-icons/all-files/im/ImCancelCircle";
 import { IoTimeOutline } from "@react-icons/all-files/io5/IoTimeOutline";
+import { IoCloseOutline } from "@react-icons/all-files/io5/IoCloseOutline";
 
 const TourData = ({ tourData }: any) => {
   const TourDataItems = [
@@ -21,7 +21,7 @@ const TourData = ({ tourData }: any) => {
     { name: "Offered in: English", icon: <IoChatbubblesOutline /> },
     {
       name: "Free cancellation",
-      icon: <ImCancelCircle />,
+      icon: <IoCloseOutline />,
       text: "Cancel up to 24 hours in advance to receive a full refund",
     },
     { name: "Private or small groups available", icon: <IoPeopleOutline /> },

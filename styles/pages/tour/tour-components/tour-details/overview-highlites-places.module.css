@@ -19,7 +19,14 @@
   column-gap: 20px;
   row-gap: 20px;
 }
-
+.container_highlits {
+  width: 100%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 @media screen and (max-width: 1000px) {
   .container {
     width: 90%;
