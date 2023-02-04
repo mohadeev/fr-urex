@@ -11,7 +11,7 @@ const RlatedTours = ({ Tours, Text }: any) => {
       <TitlesHeads Head={Text} HeadName="head_4_bold" />
       <div className={Style.tours_container}>
         {Tours.length
-          ? Tours.map((item: any) => <ToursCard DestData={item} />)
+          ? Tours.map((item: any , index ) => <ToursCard key={index} DestData={item} />)
           : null}
       </div>
     </div>
