@@ -69,7 +69,7 @@ const ConfirmTours = () => {
             purchase_units: [
               {
                 amount: {
-                  value: SubTotalLater,
+                  value: "1",
                 },
               },
             ],

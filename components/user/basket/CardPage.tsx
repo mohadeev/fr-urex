@@ -42,10 +42,10 @@ const CardPage = () => {
         <div className={Style.related_container}>
           <TitlesHeads Head={"Related Services"} HeadName="head_4_bold" />
           <div className={Style.tours_container}>
-          {baskeServices.length
-            ? baskeServices.map((item: any) => <ToursCard DestData={item} />)
-            : null}
-        </div>
+            {baskeServices.length
+              ? baskeServices.map((item: any) => <ToursCard DestData={item} />)
+              : null}
+          </div>
         </div>
       </div>
     </PayPalScriptProvider>
