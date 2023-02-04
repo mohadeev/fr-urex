@@ -27,14 +27,14 @@ const TourData = ({ tourData }: any) => {
     { name: "Private or small groups available", icon: <IoPeopleOutline /> },
   ];
   return (
-    <div className={Style.container}>
+    <ul className={Style.container}>
       {TourDataItems.map(({ name, icon }) => (
-        <div className={Style.data_container}>
+        <li className={Style.data_container}>
           <i className={Style.icon}>{icon}</i>
           <span className={Style.data}>{name}</span>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

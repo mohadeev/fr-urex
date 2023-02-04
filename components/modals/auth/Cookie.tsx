@@ -5,7 +5,6 @@ import Style from "../../../styles/modals/auth/cookie.module.css";
 import { useRouter } from "next/router";
 // import { UserLoginSuccessed } from "../../redux/UserSlice/UserSlice";
 import { useSelector, useDispatch } from "react-redux";
-import Cookies from "js-cookie";
 import { AiOutlineEye } from "@react-icons/all-files/ai/AiOutlineEye";
 import { AiOutlineEyeInvisible } from "@react-icons/all-files/ai/AiOutlineEyeInvisible";
 import Link from "next/link";
@@ -13,12 +12,17 @@ import { toggleCookie } from "../../../redux/style-slice/general-style/GenrealSt
 import { IoCloseOutline } from "@react-icons/all-files/io5/IoCloseOutline";
 import { TitlesHeads } from "../TitlesHeads";
 import { ParagraphsP } from "../NormalText";
+import Cookies from "js-cookie";
+
 //GH
 const Cookie = () => {
   const dispatch = useDispatch();
   const handelToggleMenu = () => {
+    Cookies.set("use-cookie", "true");
+
     dispatch(toggleCookie(false));
   };
+
   return (
     <div className={Style.singup_container}>
       <div className={Style.div_second}>

@@ -19,7 +19,7 @@ const HeaderCenter = () => {
 
   return (
     <>
-      <div className={Style.container}>
+      <nav className={Style.container}>
         {asPath === "/" ? (
           !MenuBoolean && (
             <ul className={Style.container_ul}>
@@ -43,7 +43,7 @@ const HeaderCenter = () => {
         ) : (
           <SearchInput />
         )}
-      </div>
+      </nav>
     </>
   );
 };

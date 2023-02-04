@@ -49,19 +49,19 @@ const SideMenu = () => {
           <div className={Style.container_search}>
             <SearchInput />
           </div>
-          <div className={Style.container_secoond}>
-            <div className={Style.modal_container}>
+          <nav className={Style.container_secoond}>
+            <ul className={Style.modal_container}>
               {first.map(({ name, link }: any) => (
-                <div
+                <li
                   onClick={() => {
                     link && HandelClick(link);
                   }}
                   className={Style.link_container}
                 >
                   <HeaderText Text={name} />
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
 
             <div className={Style.modal_container}>
               {second.map(({ name, link }: any) => (
@@ -94,7 +94,7 @@ const SideMenu = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </nav>
         </div>
 
         <div onClick={handelToggleMenu} className={Style.rest_container}>
