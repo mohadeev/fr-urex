@@ -12,8 +12,16 @@ import { ImCancelCircle } from "@react-icons/all-files/im/ImCancelCircle";
 import { IoTimeOutline } from "@react-icons/all-files/io5/IoTimeOutline";
 import { ParagraphsP } from "../../../modals/NormalText";
 import { SkinyText } from "../../../modals/SkinyText";
+import { useSelector } from "react-redux";
 
 const ConfirmTours = () => {
+  const baskeServices = useSelector(
+    (state: any) => state.basketReducer.cardBasket
+  );
+  console.log(baskeServices);
+  const SubTotal = baskeServices.map((iteem: any) => parseInt(iteem.price));
+  const SubTotalLater = SubTotal.reduce((a: any, b: any) => a + b, 0);
+  console.log(SubTotal, SubTotalLater);
   const TourDataItems = [
     {
       name: "Duration: " + 4 + " Days",
@@ -45,7 +53,7 @@ const ConfirmTours = () => {
           <ParagraphsP Text={"Total (1 item):"} />
         </div>
         <div className={Style.text_small}>
-          <NormalTitlesMedum HeadName="big_strong" Head={"$ 30"} />
+          <NormalTitlesMedum HeadName="big_strong" Head={SubTotalLater} />
           <SkinyText Text={"Total (1 item):"} />
         </div>
       </div>

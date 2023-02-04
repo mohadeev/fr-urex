@@ -8,7 +8,7 @@
   /* border-top: solid 3px #222222; */
   row-gap: 20px;
   padding: 20px 0;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px; */
   padding: 20px;
   border-radius: 5px;
   background-color: #fbf1ec;
@@ -30,7 +30,7 @@
   margin-left: auto;
 }
 .search_button {
-  background-color: #f3941e;
+  background-color: #222222;
   color: white;
   font-size: 15px;
   height: 40px;
@@ -52,7 +52,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  border: solid 2px #f3941e;
+  border: solid 1px #222222;
 }
 
 @media screen and (max-width: 900px) {

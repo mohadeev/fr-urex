@@ -11,9 +11,14 @@ import ConfirmTours from "./card-comp/ConfirmTours";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 const CardPage = () => {
-  const basketLength = useSelector(
+  const baskeServices = useSelector(
     (state: any) => state.basketReducer.cardBasket
   );
+  console.log(baskeServices);
+  const SubTotal = baskeServices.map((iteem: any) => parseInt(iteem.price));
+  const SubTotalLater = SubTotal.reduce((a: any, b: any) => a + b, 0);
+  console.log(SubTotal, SubTotalLater);
+
   return (
     <PayPalScriptProvider
       options={{
@@ -26,8 +31,8 @@ const CardPage = () => {
           <TitlesHeads Head={"Shopping cart"} HeadName="head_4_bold" />
         </div>
         <div className={Style.tours_added_container}>
-          {basketLength.length
-            ? basketLength.map((item: any) => (
+          {baskeServices.length
+            ? baskeServices.map((item: any) => (
                 <CardTourDetails DestData={item} />
               ))
             : null}
@@ -39,8 +44,8 @@ const CardPage = () => {
           <TitlesHeads Head={"Related Services"} HeadName="head_4_bold" />
         </div>{" "}
         <div className={Style.tours_container}>
-          {basketLength.length
-            ? basketLength.map((item: any) => <ToursCard DestData={item} />)
+          {baskeServices.length
+            ? baskeServices.map((item: any) => <ToursCard DestData={item} />)
             : null}
         </div>
         <PayPalButtons
@@ -49,7 +54,7 @@ const CardPage = () => {
               purchase_units: [
                 {
                   amount: {
-                    value: "25",
+                    value: SubTotalLater,
                   },
                 },
               ],

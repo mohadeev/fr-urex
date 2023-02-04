@@ -77,9 +77,9 @@ const ToursCard = ({ DestData }: any) => {
           </p>
           <div className={Style.price_data}>
             <span className={Style.price}> From {DestData?.price} </span>
-            {/* <button ref={basketRef} className={Style.book_now}>
+            <button ref={basketRef} className={Style.book_now}>
               Book Now
-            </button> */}
+            </button>
           </div>
         </div>
       </>
