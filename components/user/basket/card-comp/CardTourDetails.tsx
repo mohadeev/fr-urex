@@ -13,6 +13,8 @@ import { IoTimeOutline } from "@react-icons/all-files/io5/IoTimeOutline";
 import { IoTrashSharp } from "@react-icons/all-files/io5/IoTrashSharp";
 
 import { ParagraphsP } from "../../../modals/NormalText";
+import { removeFromBasket } from "../../../../redux/basket-slice/BasketSlice";
+import { useDispatch } from "react-redux";
 
 const CardTourDetails = ({ DestData }: any) => {
   const TourDataItems = [
@@ -40,6 +42,7 @@ const CardTourDetails = ({ DestData }: any) => {
         <BsStarFill />
       </i>
     ));
+  const dispatch = useDispatch();
   return (
     <div className={Style.container}>
       <div
@@ -67,7 +70,12 @@ const CardTourDetails = ({ DestData }: any) => {
         ))}
       </div>
       <div className={Style.price_details}>
-        <IoTrashSharp />
+        <button
+          onClick={() => dispatch(removeFromBasket({ id: DestData?._id }))}
+        >
+          <IoTrashSharp />
+        </button>
+
         <ParagraphsP Text={DestData?.price} />
       </div>
     </div>

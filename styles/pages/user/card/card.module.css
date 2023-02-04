@@ -7,7 +7,7 @@
   align-items: flex-start;
   margin: 0px auto;
   height: auto;
-  row-gap: 20px;
+  row-gap: 0px;
   margin-top: 20px;
 }
 .tours_added_container {
@@ -40,8 +40,8 @@
 }
 .related_container {
   margin-top: 0px;
-  width : 100%;
-  height : auto;
+  width: 100%;
+  height: auto;
 }
 
 .text_container {
