@@ -4,22 +4,29 @@ import Style from "../../../styles/layout/footer/footer-components/news-latter.m
 import basedPostUrlRequest from "../../../utils/basedPostUrlRequest";
 import { poPUppRedcuer } from "../../../redux/style-slice/general-style/GenrealStyle";
 import { useDispatch } from "react-redux";
-
+import SocailMediaLinks from "./SocailMediaLinks";
 const NewsLatter = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const handleSubmet = async (e: any) => {
-    const body: any = {
-      email,
-    };
-    await basedPostUrlRequest("/api/post/contact/news-latter", body).then(
-      () => {
-        dispatch(poPUppRedcuer({ data: "you emaill was addec thank you" }));
-        setTimeout(() => {
-          dispatch(poPUppRedcuer({ data: "" }));
-        }, 10000);
-      }
-    );
+    if (email.length >= 8 &&email.includes("@") ) {
+      const body: any = {
+        email,
+      };
+      await basedPostUrlRequest("/api/post/contact/news-latter", body).then(
+        () => {
+          dispatch(poPUppRedcuer({ data: "you emaill was addec thank you" }));
+          setTimeout(() => {
+            dispatch(poPUppRedcuer({ data: "" }));
+          }, 10000);
+        }
+      );
+    }else{
+      dispatch(poPUppRedcuer({ data: "the text entered does not seems to be an email" }));
+      setTimeout(() => {
+        dispatch(poPUppRedcuer({ data: "" }));
+      }, 10000);
+    }
   };
   return (
     <div className={Style.container}>
@@ -51,6 +58,7 @@ const NewsLatter = () => {
           By submitting this form, I agree to the urexcursion T&Cs and Privacy
           policy.
         </small>
+        <SocailMediaLinks />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ import { ParagraphsP } from "../../../modals/NormalText";
 const CardTourDetails = ({ DestData }: any) => {
   const TourDataItems = [
     {
-      name: "Duration: " + 4 + " Days",
+      name: "Duration: " + DestData?.days?.length + " Days",
       icon: <IoTimeOutline />,
       text: "Check availability to see starting times.",
     },
@@ -32,7 +32,8 @@ const CardTourDetails = ({ DestData }: any) => {
     },
     { name: "Private or small groups available", icon: <IoPeopleOutline /> },
   ];
-  const repeat = Array(5)
+  const stars = 5 + DestData?.reviews?.length;
+  const repeat = Array(stars)
     .fill(0)
     .map((_, i) => (
       <i key={i}>
@@ -53,10 +54,10 @@ const CardTourDetails = ({ DestData }: any) => {
         className={Style.image}
       ></div>
       <div className={Style.tour_data}>
-        <NormalTitlesMedum Head={"sahara desert tours moroco tours "} />
-
+        <NormalTitlesMedum Head={DestData?.name} />
         <div className={Style.rating_container}>
-          45 <p className={Style.stars}>{repeat}</p> 55
+          {DestData?.reviews?.length} <p className={Style.stars}>{repeat}</p>
+          {DestData?.reviews?.length}
         </div>
         {TourDataItems.map(({ name, icon }) => (
           <div className={Style.data_container}>
@@ -67,7 +68,7 @@ const CardTourDetails = ({ DestData }: any) => {
       </div>
       <div className={Style.price_details}>
         <IoTrashSharp />
-        <ParagraphsP Text={"20"} />
+        <ParagraphsP Text={DestData?.price} />
       </div>
     </div>
   );

@@ -40,9 +40,8 @@
 }
 .related_container {
   margin-top: 0px;
-}
-.d{
-
+  width : 100%;
+  height : auto;
 }
 
 .text_container {

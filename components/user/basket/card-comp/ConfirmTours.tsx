@@ -13,6 +13,7 @@ import { IoTimeOutline } from "@react-icons/all-files/io5/IoTimeOutline";
 import { ParagraphsP } from "../../../modals/NormalText";
 import { SkinyText } from "../../../modals/SkinyText";
 import { useSelector } from "react-redux";
+import { PayPalButtons } from "@paypal/react-paypal-js";
 
 const ConfirmTours = () => {
   const baskeServices = useSelector(
@@ -46,6 +47,7 @@ const ConfirmTours = () => {
         <BsStarFill />
       </i>
     ));
+
   return (
     <div className={Style.container}>
       <div className={Style.price_details}>
@@ -61,6 +63,25 @@ const ConfirmTours = () => {
       <button className={Style.search_button_border}>
         Reserve now & pay later
       </button>
+      <PayPalButtons
+        createOrder={(data, actions) => {
+          return actions.order.create({
+            purchase_units: [
+              {
+                amount: {
+                  value: SubTotalLater,
+                },
+              },
+            ],
+          });
+        }}
+        onApprove={(data: any, actions: any) => {
+          return actions.order.capture().then((details: any) => {
+            const name = details.payer.name.given_name;
+            alert(`Transaction completed by ${name}`);
+          });
+        }}
+      />
     </div>
   );
 };

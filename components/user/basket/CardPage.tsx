@@ -1,4 +1,3 @@
-import { PayPalButtons } from "@paypal/react-paypal-js";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
@@ -28,7 +27,7 @@ const CardPage = () => {
     >
       <div className={Style.container}>
         <div className={Style.text_container}>
-          <TitlesHeads Head={"Shopping cart"} HeadName="head_4_bold" />
+          <TitlesHeads Head={"Card"} HeadName="head_4_bold" />
         </div>
         <div className={Style.tours_added_container}>
           {baskeServices.length
@@ -42,31 +41,12 @@ const CardPage = () => {
         </div>
         <div className={Style.related_container}>
           <TitlesHeads Head={"Related Services"} HeadName="head_4_bold" />
-        </div>{" "}
-        <div className={Style.tours_container}>
+          <div className={Style.tours_container}>
           {baskeServices.length
             ? baskeServices.map((item: any) => <ToursCard DestData={item} />)
             : null}
         </div>
-        <PayPalButtons
-          createOrder={(data, actions) => {
-            return actions.order.create({
-              purchase_units: [
-                {
-                  amount: {
-                    value: SubTotalLater,
-                  },
-                },
-              ],
-            });
-          }}
-          onApprove={(data: any, actions: any) => {
-            return actions.order.capture().then((details: any) => {
-              const name = details.payer.name.given_name;
-              alert(`Transaction completed by ${name}`);
-            });
-          }}
-        />
+        </div>
       </div>
     </PayPalScriptProvider>
   );
