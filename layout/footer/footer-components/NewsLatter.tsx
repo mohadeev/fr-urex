@@ -58,7 +58,7 @@ const NewsLatter = () => {
           By submitting this form, I agree to the urexcursion T&Cs and Privacy
           policy.
         </small>
-        <SocailMediaLinks />
+    
       </div>
     </div>
   );

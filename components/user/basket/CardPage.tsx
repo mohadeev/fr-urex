@@ -8,6 +8,7 @@ import ToursCard from "../../tours/tours-components/TourCard";
 import CardTourDetails from "./card-comp/CardTourDetails";
 import ConfirmTours from "./card-comp/ConfirmTours";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import RlatedTours from "../../tour/tour-components/other/RlatedTours";
 
 const CardPage = () => {
   const baskeServices = useSelector(
@@ -40,12 +41,7 @@ const CardPage = () => {
           <ConfirmTours />
         </div>
         <div className={Style.related_container}>
-          <TitlesHeads Head={"Related Services"} HeadName="head_4_bold" />
-          <div className={Style.tours_container}>
-            {baskeServices.length
-              ? baskeServices.map((item: any) => <ToursCard DestData={item} />)
-              : null}
-          </div>
+          <RlatedTours Text="Related Services." Tours={baskeServices} />
         </div>
       </div>
     </PayPalScriptProvider>

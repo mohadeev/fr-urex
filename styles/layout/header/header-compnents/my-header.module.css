@@ -13,16 +13,23 @@
   justify-content: center;
   column-gap: 5px;
 }
+.container_my_account {
+  background-color: #222222;
+  color: #fff;
+}
 .container_my_account > svg {
-  color: #222222;
+  color: #fff;
   font-size: 25px;
   cursor: pointer;
 }
-
+.container_my_account > p {
+  color: #fff;
+}
 .container_my_account:hover {
   background-color: #fafafa;
   text-decoration: underline #222222;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #222222f8;
 }
 
 .modal_ {

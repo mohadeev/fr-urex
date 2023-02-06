@@ -1,7 +1,8 @@
 import React from "react";
 import Style from "../../../../styles/pages/tour/tour-components/tour-details/review.module.css";
 import { BsStarFill } from "@react-icons/all-files/bs/BsStarFill";
-const Review = ({ review }:any) => {
+import { ParagraphsP } from "../../../modals/NormalText";
+const Review = ({ review }: any) => {
   const repeat = Array(5)
     .fill(0)
     .map((_, i) => (
@@ -31,7 +32,10 @@ const Review = ({ review }:any) => {
           <p className={Style.review_name}>Greate Travel tour to morocco </p>
           <p className={Style.stars}>{repeat}</p>
         </div>
-        <p className={Style.review_content}>{Text}</p>
+        <ParagraphsP
+          Text={Text}
+          TextName={"text_flex_start_normal"}
+        />
       </div>
     </div>
   );

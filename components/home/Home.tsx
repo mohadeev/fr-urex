@@ -3,6 +3,8 @@ import HomeSearch from "./HomeSearch";
 import Style from "../../styles/pages/home/home.module.css";
 import RlatedTours from "../tour/tour-components/other/RlatedTours";
 import Testimonial from "./Testimonial";
+import Taggs from "../modals/Taggs";
+import HomeImage from "./HomeImage";
 
 const Home = ({ Tours }: any) => {
   return (
@@ -13,6 +15,8 @@ const Home = ({ Tours }: any) => {
         Tours={Tours.slice(0, 4)}
       />
       <Testimonial />
+      <Taggs />
+      <HomeImage />
     </div>
   );
 };

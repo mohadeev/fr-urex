@@ -59,6 +59,9 @@ const ToursCard = ({ DestData }: any) => {
             })`,
           }}
         >
+          <button ref={basketRef} className={Style.book_now}>
+            Book Now
+          </button>
           <div className={Style.svg_container} ref={wishListRef}>
             {asPath === "/user/wish-list" ? <RiHeartFill /> : <BiHeart />}
           </div>
@@ -77,9 +80,6 @@ const ToursCard = ({ DestData }: any) => {
           </p>
           <div className={Style.price_data}>
             <span className={Style.price}> From {DestData?.price} </span>
-            <button ref={basketRef} className={Style.book_now}>
-              Book Now
-            </button>
           </div>
         </div>
       </>

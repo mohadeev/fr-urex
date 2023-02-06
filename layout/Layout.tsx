@@ -14,6 +14,7 @@ import { PopUpp } from "../components/modals/PopUpp";
 import basedGetUrlRequestLogedIn from "../utils/basedGetUrlRequestLogedIn";
 import AuthSignIn from "../components/modals/auth/AuthSignIn";
 import Cookie from "../components/modals/auth/Cookie";
+import ButtonChat from "../components/modals/ButtonChat";
 
 interface main {
   children: any;
@@ -144,6 +145,7 @@ const Layout = ({ children }: any) => {
         {formSignUp && <AuthSignIn />}
         {useCookie !== "true" && cookieContainer && <Cookie />}
         <Footer />
+        <ButtonChat />
       </div>
     </>
   );
