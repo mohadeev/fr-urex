@@ -13,6 +13,7 @@ import SearchInput from "./header-components/SearchInput";
 import { ParagraphsP } from "../../components/modals/NormalText";
 import { useRouter } from "next/router";
 import { HeaderText } from "../../components/modals/HeaderText";
+import { IoCloseOutline } from "@react-icons/all-files/io5/IoCloseOutline";
 const SideMenu = () => {
   const Router = useRouter();
   const UserIsSignedIn = useSelector(
@@ -99,7 +100,7 @@ const SideMenu = () => {
 
         <div onClick={handelToggleMenu} className={Style.rest_container}>
           <span className={Style.meun}>
-            <IoCloseCircleOutline />
+            <IoCloseOutline />
           </span>
         </div>
       </div>
